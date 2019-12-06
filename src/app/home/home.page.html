@@ -7,8 +7,34 @@
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+
+  <ion-input placeholder="Nombre"></ion-input>
+  <ion-input placeholder="Descripción"></ion-input>
+  <ion-input placeholder="Precio"></ion-input> 
+
+  <ion-button color="success" (click)="mostrarOculto()">Categorías</ion-button>
+
+  <ion-card *ngIf="mostrar">  
+    <ion-card-content>
+      <div>
+        <div>
+          <ion-button color="success" (click)="mostrarMotor()">Motor 
+              <ion-icon name="logo-model-s" ></ion-icon> 
+          </ion-button>
+        </div>
+        <div *ngIf="motor"> 
+          <p>¿Qué tipo de vehículo es?</p>
+        </div>
+      </div>
+
+
+      <ion-button color="success">Inmobiliaria
+          <ion-icon name="home"></ion-icon>
+      </ion-button>
+
+      <ion-button color="success">Tecnología
+          <ion-icon name="desktop"></ion-icon>
+  
+
+
 </ion-content>

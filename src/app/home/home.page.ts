@@ -7,6 +7,18 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  mostrar: boolean = false;
+  motor: boolean = false;
+
   constructor() {}
+
+  mostrarOculto(): void {
+    this.mostrar = !this.mostrar;
+  }
+
+  mostrarMotor(): void {
+    this.motor = !this.motor;
+
+  }
 
 }
